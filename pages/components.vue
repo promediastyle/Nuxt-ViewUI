@@ -15,6 +15,13 @@
       </div>
     </div>
 
+    <div class="border-b">
+      <h2 class="h2">Drawer</h2>
+      <div class="py-[40px]">
+        <AppDrawer/>
+      </div>
+    </div>
+
   </main>
 </template>
 
