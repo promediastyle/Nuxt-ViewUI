@@ -27,7 +27,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   .vertical-center-modal{
     display: flex;
     align-items: center;

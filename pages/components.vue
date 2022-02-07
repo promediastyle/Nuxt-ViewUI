@@ -8,6 +8,13 @@
       </div>
     </div>
 
+    <div class="border-b">
+      <h2 class="h2">Carousel</h2>
+      <div class="py-[40px]">
+        <AppCarousel/>
+      </div>
+    </div>
+
   </main>
 </template>
 

@@ -18,14 +18,14 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     bodyAttrs: {
-      class: 'antialiased'
+      class: 'antialiased text-base'
     },
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~/assets/css/iview.css', // Удален Normalize CSS, он мешает Tailwind CSS
-    '~/assets/css/main.css', // Глобавльные стили Tailwind CSS
+    '~/assets/css/iview.css',
+    '~/assets/css/main.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
