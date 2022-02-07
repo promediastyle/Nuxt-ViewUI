@@ -10,19 +10,22 @@ export default {
     },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    bodyAttrs: {
+      class: 'antialiased'
+    },
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    'view-design/dist/styles/iview.css',
-    '~/assets/css/main.css',
+    '~/assets/css/iview.css', // Удален Normalize CSS, он мешает Tailwind CSS
+    '~/assets/css/main.css', // Глобавльные стили Tailwind CSS
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -40,7 +43,28 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/i18n',
   ],
+
+  i18n: {
+    locales: [
+      {
+        code: 'ru',
+        iso: 'ru-RU',
+        file: 'ru.js',
+        name: 'Русский'
+      },
+      {
+        code: 'ua',
+        iso: 'ua-UA',
+        file: 'ua.js',
+        name: 'Ukraine'
+      },
+    ],
+    defaultLocale: 'ru',
+    lazy: true,
+    langDir: 'lang/',
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -50,5 +74,21 @@ export default {
         autoprefixer: {},
       },
     },
-  }
+    publicPath: 'assets',
+  },
+
+  generate: {
+    dir: 'dist',
+    fallback: '404.html'
+  },
+
+  cli: {
+    badgeMessages: ['Made in Fubon | http://thefubon.com'],
+    bannerColor: 'yellow'
+  },
+
+  loading: {
+    color: '#ffcc00',
+    height: '2px'
+  },
 }
