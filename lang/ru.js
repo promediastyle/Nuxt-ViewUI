@@ -3,5 +3,11 @@ export default {
     LangSwitcher: {
       language: 'Russia',
     }
+  },
+  сarousel: {
+    slider: {
+      one: 'Привет мир',
+      two: 'Слайдер 2',
+    }
   }
 }

@@ -1,26 +1,30 @@
 <template>
   <Carousel
-        v-model="value3"
-        :autoplay="setting.autoplay"
-        :autoplay-speed="setting.autoplaySpeed"
-        :dots="setting.dots"
-        :radius-dot="setting.radiusDot"
-        :trigger="setting.trigger"
-        :arrow="setting.arrow"
-        :loop="setting.loop">
-        <CarouselItem>
-            <div class="demo-carousel">Hello World</div>
-        </CarouselItem>
-        <CarouselItem>
-            <div class="demo-carousel">Slide 2</div>
-        </CarouselItem>
-        <CarouselItem>
-            <div class="demo-carousel">Slide 3</div>
-        </CarouselItem>
-        <CarouselItem>
-            <div class="demo-carousel">Slide 4</div>
-        </CarouselItem>
-    </Carousel>
+    v-model="value3"
+    :autoplay="setting.autoplay"
+    :autoplay-speed="setting.autoplaySpeed"
+    :dots="setting.dots"
+    :radius-dot="setting.radiusDot"
+    :trigger="setting.trigger"
+    :arrow="setting.arrow"
+    :loop="setting.loop">
+    <CarouselItem>
+      <div class="demo-carousel">
+        {{ $t('сarousel.slider.one') }}
+      </div>
+    </CarouselItem>
+    <CarouselItem>
+      <div class="demo-carousel">
+        {{ $t('сarousel.slider.two') }}
+      </div>
+    </CarouselItem>
+    <CarouselItem>
+      <div class="demo-carousel">Slide 3</div>
+    </CarouselItem>
+    <CarouselItem>
+      <div class="demo-carousel">Slide 4</div>
+    </CarouselItem>
+  </Carousel>
 </template>
 <script>
     export default {
